@@ -1,0 +1,61 @@
+{% extends 'base_generic.html' %}
+       
+    {% block title %}
+    <title>Gustavo Virtual | Contacto</title>
+    {% endblock title %}
+
+
+    {% block header %}
+    <header id="header">
+            <h1><a href="index.html">Gustavo Virtual</a></h1>
+            <a href="#nav">Menu</a>
+    </header>
+    {% endblock header %}
+
+ 			
+    {% block scripts-load %}
+        {% load static %}
+        <script src="{% static 'js/contacto.js' %}"></script>
+    {% endblock scripts-load %}
+        
+        
+    {% block content %}
+            
+</div>
+    <section id="four" class="wrapper style2 special">
+        <div class="inner">
+            <header class="major narrow">
+                <h2>CONTACTAME</h2>
+                <p>Si necesitas contactarme enviame un mensaje.</p>
+            </header>
+            <form action="#" method="POST">
+                <div class="container 75%">
+                    <div class="row uniform 50%">
+
+                            {% csrf_token %}
+                            {{ form.as_p }}
+
+                            <!-- <br><HR></HR>
+                        <div class="6u 12u$(xsmall)">
+                            <input name="name" placeholder="Nombre" type="text" required>
+                        </div>
+                        <div class="6u$ 12u$(xsmall)">
+                            <input name="email" placeholder="Email" type="email" required/>
+                        </div>
+                        <div class="12u$">
+                            <textarea name="message" placeholder="Mensaje" rows="4" required></textarea>
+                        </div> -->
+                    </div>
+                </div>
+                <ul class="actions">
+                        <li><input type="submit" class="special" value="Enviar" /></li>
+                        <li><input type="reset" class="alt" value="Borrar" /></li>
+                </ul>
+                <!-- <ul class="actions">
+                    <li><input type="submit" class="special" value="Enviar" /></li>
+                    <li><input type="reset" class="alt" value="Borrar" /></li>
+                </ul> -->
+            </form>
+        </div>
+    </section>
+    {% endblock content %}

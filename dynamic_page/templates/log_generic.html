@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    {% load static %}
+    <!-- <link rel="stylesheet" href="{% static 'css/loader.css' %}" /> -->
+    <link rel="stylesheet" href="{% static 'css/log.css' %}" />
+    {% block title %}
+    <title>Gustavo Virtual</title>
+    {% endblock title %}
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous"> 
+    <link rel="shortcut icon" href="{% static 'images/log/login.png' %}">
+    <link rel="stylesheet" href="{% static 'css/fonts.css' %}" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="http://anijs.github.io/lib/anicollection/anicollection.css">
+</head>
+
+    <!-- ========================== LOADER ==========================-->
+    <section id="preloader">
+            <div id="all">
+                <div id="loader">
+                    <div id="ball"></div>
+                </div>
+            </div>
+            <div class="texto" id="texto"><span>Cargando...</span></div>
+    </section>
+    <!-- preloader -->
+
+
+
+
+<body class="landing">
+
+    <!--CARGANDO-->
+    <div class="Todo">
+        <div class="White">
+            <div class="cajaFormulario">
+                    <div class="image-content">
+                        <div>
+                    <span>Log In</span><br>
+                            <div class="circle">
+                                <img src="{% static 'images/log/bloqueado.png' %}" alt="Candado-Animate.png" data-anijs="if: click, on: input, do: wobble animated">
+                            </div>
+                        </div>
+                    </div>
+                <div class="formulario-content">
+            {% block content %}
+            <!-- THE CONTENT    -->
+            {% endblock content %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    {% load static %}
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script> 
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/skel.min.js' %}"></script>
+    <script src="{% static 'js/util.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+    <script src="{% static 'extensions/anijs.js' %}"></script>
+    <script src="{% static 'extensions/anijs-helper-dom-min.js' %}"></script>
+    <script src="{% static 'js/extras.js' %}"></script>
+
+</body>
+
+</html>

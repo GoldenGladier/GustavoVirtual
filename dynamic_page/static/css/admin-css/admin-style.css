@@ -1,0 +1,253 @@
+body, *{
+    margin: 0;
+    padding: 0;
+}
+a:hover{
+    text-decoration: none;
+    color: #00faac;
+    transition: 0.4s;
+}
+
+.night{
+    color: whitesmoke;
+}
+.noneHover:hover{
+    color: whitesmoke;
+}
+
+
+.blockContent{
+    width: 85%;
+    height: auto;
+    min-height: 100%;
+    background: transparent;
+    margin-left: 15%;
+    position: absolute;
+    margin-top: 55px;
+    background: #17223b;
+}
+.contentGod{
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    position: absolute;
+    background: #17223b;
+    color: #fff;
+    overflow: hidden;
+    padding: 35px;
+    background: #17223b;
+}
+
+.item-texto{
+    padding: 0 25px;
+}
+.paragraphs{
+    border-radius: 10px;
+    margin: 5px 0;
+    padding: 0;
+    overflow: hidden;
+}
+.paragraphs h4{
+    font-weight: normal;
+    font-size: 16pt;
+}
+.odd{
+    background: #263859;
+}
+.even{
+    background: #6b778d;
+}
+
+.bar-btn{
+    width: 100%;
+    min-height: 45px;
+    height: auto;
+    background: rgba(0, 85, 175);
+    position: relative;
+    margin: auto;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bar-btn h1{
+    font-size: 20pt;
+    font-weight: bold;
+}
+
+.controls{
+    background: #cc405e;
+    width: 50px;
+    text-align: center;
+    padding: 0;
+    color: #fff;
+    border-radius: 0;
+}
+.ctrl-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    width: 100%;
+    color: #fff;
+    font-size: 19pt;
+}
+.controls .edit:hover{
+    font-size: 23pt;
+    color: #fff;
+    background: #ffa323;
+    transition: 0.2s;
+}
+.controls .delete:hover{
+    font-size: 23pt;
+    color: #fff;
+    background: #ff502f;
+    transition: 0.2s;
+    border-radius: 0;
+}
+
+.modal{
+    color: #17223b;
+}
+.modal-body{
+    text-align: center;
+}
+.modal-header{
+    background: #cc405e;
+    color: #fff;
+}
+.modal-header button{
+    color: #fff;
+    transition: 0.1s;
+}
+.modal-header button:hover{
+    color: #17223b;
+    transition: 0.1s;
+}
+.upload{
+    display: none;
+}
+.info-user{
+    font-family: 'Righteous', cursive;
+}
+/*========================== CONTROLS RESPONSIVE ===========================*/
+
+@media screen and (max-width: 580px ) {
+    .controls{
+        width: 100%;
+        height: 35px;
+        float: left;
+}
+    .ctrl-btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 50%;
+        font-size: 19pt;
+    }
+    .controls i{
+        font-size: 18pt;
+    }
+    .controls .edit{
+        float: left;
+    }
+    .controls .delete{
+        float: right;
+    }
+    .controls .edit:hover{
+        font-size: 23pt;
+        color: #fff;
+        background: #ffa323;
+        transition: 0.2s;
+    }
+    .controls .delete:hover{
+        font-size: 23pt;
+        color: #fff;
+        background: #ff502f;
+        transition: 0.2s;
+    }
+}
+
+/*========================== CONTROLS RESPONSIVE ===========================*/
+
+
+/*========================== PAGINATE ===========================*/
+.pagination{
+    background: #263859;
+    width: auto;
+    margin: auto;
+}
+.pagination li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.next{
+    border-radius: 0 3px 3px 0;
+}
+.prev{
+    border-radius: 3px 0 0 3px;
+}
+.using{
+    background: #ffa323;
+    font-weight: bold;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-radius: 5px;
+    margin: 0 1px;
+    border: 1px solid #ffa323;
+    color: #fff;
+}
+.using:hover{
+    background: #d1851b;
+    border: 1px solid #d1851b;
+    color: #fff;
+}
+.disabled{
+    background: #263859;
+    border: 0px;
+    color: rgb(177, 177, 177);
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-radius: 5px;
+    margin: 0 1px;
+}
+.disabled:hover{
+    background: #263859;
+    color: rgb(177, 177, 177);
+}
+.nav-pagination{
+    margin: auto;
+    margin-top: 20px;
+}
+.page-link{
+    z-index: 0 !important;
+}
+
+
+.img-user-list{
+    height: 50px;
+    width: auto;
+    border: solid 1px rgb(180, 180, 180);
+    border-radius: 5px;
+    background: rgb(180, 180, 180);
+    overflow: hidden;
+}
+
+.disabled{
+    border-radius: 0 !important;
+    margin-left: 0;
+    background: rgb(177, 177, 177);
+    color: #fff;
+    transition: 0s;
+}
+.disabled:hover{
+    background: rgb(128, 128, 128);
+    color: #fff;
+    transition: 0s;
+}
+#gold{
+    color: #d1851b !important;
+}

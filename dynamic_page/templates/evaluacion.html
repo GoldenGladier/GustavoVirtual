@@ -1,0 +1,40 @@
+{% extends 'base_generic.html' %}
+
+    
+    {% block title %}
+    <title>Gustavo Virtual | Evaluación</title>
+    {% endblock title %}
+
+    {% block loadResources %}
+      {% load static %}
+      <script src="{% static 'js/extras.js' %}"></script>
+    {% endblock loadResources %}
+             
+    {% block content %}
+    <div class="evaluacion">
+      <center><h2>EVALUACIÓN FEBRERO-JULIO 2019</h2></center>
+
+      {% if object_list %}
+
+      <!--============================= MATERIAS ==================================-->
+        <div class="row" id="row-evaluation">
+          {% for object in object_list %}
+          <div class="col-sm materia">
+            <div class="row">
+              <div class="col-12 materia-name">{{ object.name }}</div>
+              <div class="col-12 parcial num-1">Parcial 1</div>
+              <div class="col-12 porcentajesList" id="{{ object.id }}" name = "porcentajesList">{{ object.unityOne|linebreaks }}</div>
+              <div class="col-12 parcial num-2">Parcial 2</div>
+              <div class="col-12 porcentajesList" id="{{ object.id }}" name = "porcentajesList">{{ object.unityTwo }}</div>
+              <div class="col-12 parcial num-3">Parcial 3</div>
+              <div class="col-12 porcentajesList" id="{{ object.id }}" name = "porcentajesList">{{ object.unityThree }}</div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      {% else %}
+          <p>Not Found Evaluation.</p>
+      {% endif %}
+      </div>
+ 
+    {% endblock content %}

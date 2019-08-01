@@ -1,0 +1,30 @@
+.paragraph{
+    margin: 5px 0px;
+    padding: 25px;
+    padding-bottom: 0;
+    border-top: 1px solid rgba(20, 46, 60, 1);
+    overflow: hidden;
+    text-align: justify;
+}
+.container-txt{
+    text-align: justify;
+}
+
+.col img{
+    width: 110%;
+    min-width: 80px;
+    height: auto;
+    margin: auto;
+}
+
+.col{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.col .imgDown{
+    width: 35%;
+    height: auto;
+}

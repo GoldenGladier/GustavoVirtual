@@ -1,0 +1,157 @@
+.socialBar{
+    position: fixed;
+    right: 0;
+    top: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    z-index: 100;
+}
+/*
+.icon{
+    color: white;
+    text-decoration: none;
+    padding: .7rem;
+    display: flex;
+    transition: all 0.5s;
+}
+*/
+#iconoFacebook{
+    background: #515bac;
+    font-size: 1.5rem;
+    width: 2.5rem;
+    color: white;
+    text-decoration: none;
+    padding: .7rem;
+    display: flex;
+    transition: all 0.5s;
+    border-radius: 1rem 0 0 0;
+}
+#iconoTwitter{
+    background: #3c97ec;
+    font-size: 1.5rem;
+    width: 2.5rem;
+    color: white;
+    text-decoration: none;
+    padding: .7rem;
+    display: flex;
+    transition: all 0.5s;
+}
+#iconoYoutube{
+    background: #ff0025;
+    font-size: 1.5rem;
+    width: 2.5rem;
+    color: white;
+    text-decoration: none;
+    padding: .7rem;
+    display: flex;
+    transition: all 0.5s;
+}
+#iconoBlog{
+    background: #f86d39;
+    font-size: 1.5rem;
+    width: 2.5rem;
+    color: white;
+    text-decoration: none;
+    padding: .7rem;
+    display: flex;
+    transition: all 0.5s;
+}
+#iconoMod{
+    background: #383e41;
+    font-size: 1.5rem;
+    width: 2.5rem;
+    color: white;
+    text-decoration: none;
+    padding: .7rem;
+    display: flex;
+    transition: all 0.5s;
+    border-radius: 0 0 0 1rem;
+}
+#iconoInstagram{
+    background: #f61a5b;
+    font-size: 1.5rem;
+    width: 2.5rem;
+    color: white;
+    text-decoration: none;
+    padding: .7rem;
+    display: flex;
+    transition: all 0.5s;
+    border-radius: 0 0 0 1rem;
+}
+/*
+.fa-facebook{
+    background: #515bac;
+    font-size: 1.5rem;
+    width: 2.5rem;
+}
+.fa-twitter{
+    background: #3c97ec;
+    font-size: 1.5rem;
+    width: 2.5rem;
+}
+.fa-youtube-play{
+    background: #ff0025;
+    font-size: 1.5rem;
+    width: 2.5rem;
+}
+.fa-instagram{
+    background: #f61a5b;
+    font-size: 1.5rem;
+    width: 2.5rem;
+}
+
+.icon:first-child{
+    border-radius: 1rem 0 0 0;
+}
+.icon:last-child{
+    border-radius: 0 0 0 1rem;
+}
+.icon:hover{
+    padding-right: 4rem;
+    border-radius: 1rem 0 0 1rem;
+    box-shadow: 0 0 0.5rem rgba(0,0,0,0.42);    
+}
+*/
+#iconoFacebook:hover{
+    padding-right: 4rem;
+    border-radius: 1rem 0 0 1rem;
+    box-shadow: 0 0 0.5rem rgba(0,0,0,0.42); 
+}
+#iconoTwitter:hover{
+    padding-right: 4rem;
+    border-radius: 1rem 0 0 1rem;
+    box-shadow: 0 0 0.5rem rgba(0,0,0,0.42); 
+}
+#iconoYoutube:hover{
+    padding-right: 4rem;
+    border-radius: 1rem 0 0 1rem;
+    box-shadow: 0 0 0.5rem rgba(0,0,0,0.42); 
+}
+#iconoBlog:hover{
+    padding-right: 4rem;
+    border-radius: 1rem 0 0 1rem;
+    box-shadow: 0 0 0.5rem rgba(0,0,0,0.42); 
+}
+#iconoMod:hover{
+    padding-right: 4rem;
+    border-radius: 1rem 0 0 1rem;
+    box-shadow: 0 0 0.5rem rgba(0,0,0,0.42); 
+}
+#iconoInstagram:hover{
+    padding-right: 4rem;
+    border-radius: 1rem 0 0 1rem;
+    box-shadow: 0 0 0.5rem rgba(0,0,0,0.42); 
+}
+@media screen and (max-width: 440px) {
+
+    .socialBar{
+        display: none;
+    }
+}
+@media screen and (min-width: 446px) {
+
+    .socialBar{
+        display: flex;
+    }
+}

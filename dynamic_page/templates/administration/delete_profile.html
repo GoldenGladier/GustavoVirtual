@@ -1,0 +1,27 @@
+{% extends 'admin_generic.html' %}
+
+    
+    {% block title %}
+    <title>Gustavo Virtual | Confirmar Borrado</title>
+    {% endblock title %}
+        
+    {% block content %}
+        {% if request.user.is_staff %}
+            <form action="" method="post">
+                {% csrf_token %}
+                <p>Delete "{{  object.title  }}"?</p>
+                <input type="submit" value="Confirm">
+            </form>
+        {% else %}
+        <center>
+        <p>You do not have access to this page.</p>
+        {% load static %}
+        <img src="{% static 'images/log/sinScceso.png' %}" alt="Restricted.svg">
+        </center>
+        {% endif %}
+    {% endblock content %}
+
+    {% block resources %}
+        {% load static %}
+        <script type="text/javascript" src="{% static 'js/admin-js/basic.js' %}"></script>
+    {% endblock resources %}

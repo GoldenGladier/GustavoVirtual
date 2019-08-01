@@ -1,0 +1,44 @@
+{% extends 'admin_generic.html' %}
+
+    {% block title %}
+    <title>Admin Master | Crear Usuario</title>
+    {% endblock title %}
+
+    {% block createUser-menu %}
+    <a href="{% url 'admin_User_List' %}"><li class="active"><i class="fas fa-user"></i> Usuarios</li></a>
+    {% endblock createUser-menu %}
+    {% block createUser-menu-side %}
+    <a href="{% url 'admin_User_List' %}"><li class="active"><i class="fas fa-user"></i> Usuarios</li></a>
+    {% endblock createUser-menu-side %}
+              
+    {% block content %}
+        {% if request.user.is_staff %}
+            <div id="text">
+
+                    <form method="POST" class="Evaluation-form user-form Home-form" enctype="multipart/form-data">
+                        <h1>Nuevo Usuario</h1>
+
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <div class="spacebuton">
+                            <button type="submit" class="boton btn-save-pink" id="save-home">Guardar</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+        {% else %}
+        <center>
+        <p>You do not have access to this page.</p>
+        {% load static %}
+        <img src="{% static 'images/log/sinScceso.png' %}" alt="Restricted.svg">
+        </center>
+        {% endif %}
+ 
+    {% endblock content %}
+
+    {% block resources %}
+        {% load static %}
+        <script type="text/javascript" src="{% static 'js/admin-js/basic.js' %}"></script>
+    {% endblock resources %}

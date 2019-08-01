@@ -1,0 +1,41 @@
+{% extends 'base_generic.html' %}
+
+    
+    {% block title %}
+    <title>Gustavo Virtual | Carreras</title>
+    {% endblock title %}
+
+    
+    {% block header %}
+    <header id="header">
+            <h1><a href="index.html">Gustavo Virtual</a></h1>
+            <a href="#nav">Menu</a>
+    </header>
+    {% endblock header %}
+        
+    {% block banner %}{% endblock banner %}
+        
+    {% block content %}
+            
+   <div class="todo">
+        <div id="texto">
+            <h2>CARRERAS:</h2>
+    {% if object_list %}
+
+        {% for object in object_list %}
+        <div class="paragraph">
+            <h4>{{ object.name }}</h4>
+            <header><p>OBJETIVO</p></header>
+            <p>{{ object.objetive|linebreaks }}</p>
+            <header><p>RESEÑA</p></header>
+            <p>{{ object.review|linebreaks }}</p>
+            <header><p>PLAN DE ESTUDIO</p></header>
+            <a href="{{ object.studyPlan.url}}"> <i id="iconDown" class="icon fa-download"></i>  Descargar el plan de estudio.</a>
+        </div>
+
+        {% endfor %}
+    {% else %}
+        <p>Not Found Carrers.</p>
+    {% endif %}
+    </div></div>
+    {% endblock content %}

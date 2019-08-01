@@ -1,0 +1,235 @@
+#logoOmaga{
+    width: 7%;
+    max-width: 45px;
+    height: auto;
+    float: left;
+    margin: 5px 10px;
+    left: 50px;
+}
+#logoCb{
+    height: 250px;
+    width: auto;
+    margin: auto;   
+}
+.parrafo{
+    /*box-sizing: border-box;
+    padding: 10px;*/
+    width: 80%;
+    margin: auto;
+    padding: 10px 0 ;
+}
+#gusIMG{
+    max-height: 200px;
+    width: auto;
+    border-radius: 50%; 
+    float: left;
+    margin: 40px 25px 15px;
+}
+
+.Todo{
+    width: 100%;
+    margin: auto;
+    background: #ededed;
+}
+.White{
+    width: 80%;
+    margin: auto;
+    background: #ffffff;
+}
+.contentGus {
+    text-align: justify;
+    box-sizing: border-box;
+    padding: 40px;
+    -moz-flex-direction: row;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+@media screen and (max-width: 980px) {
+
+    .contentGus{
+        -moz-flex-direction: column;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+    .destacados-box{
+        height: 450px;
+    }
+    .destacados-box .izquierda{
+        padding-left: 25%; 
+    }
+    .destacados-box .derecha{
+        padding-left: 20%;
+    }
+}
+@media screen and (max-width: 475px) {
+
+    .White{
+        width: 100%;
+        margin: auto;
+        background: #ffffff;
+    }
+    .destacados{
+        height: 600px;
+    }
+    .destacados-box{
+        height: 750px;
+    }
+}
+@media screen and (min-width: 476px) {
+
+    .White{
+        width: 80%;
+        background: #ffffff;
+    }
+}
+
+.cuerpo{
+    box-sizing: border-box;
+    padding: 0 20px;
+    width: 90%;
+    margin: 0 5%;
+}
+#texto{
+    text-align: justify;
+    width: 90%;
+    height: auto;
+    background: white;
+    box-sizing: border-box;
+    padding: 20px;
+    margin: auto;
+    padding-top: 50px;
+}
+#navegacion{
+    position: fixed;
+    text-align: center;
+    float: right;
+    width: 15%;
+    height: 100%;
+    transform: translate(1060px, 250px);
+}
+#iconDown{
+    font-size: 20px;
+}
+
+#evaluando{
+    text-align: center;
+}
+#parcial1{
+    background: rgba(255, 0, 0, 0.8);
+    color: whitesmoke;
+}
+#parcial2{
+    background: rgb(0, 47, 117, 0.7);
+    color: whitesmoke;
+}
+#parcial3{
+    background: rgba(137, 43, 226, 0.7);
+    color: whitesmoke;
+}
+#biblioTable{
+    text-align: justify;
+}
+#competencia{
+    list-style: decimal;
+}
+
+.destacados{
+    min-height: 200px;
+    width: 100%;
+    padding: 40px 5%;
+    background: #0d293a;
+    color: white;
+}
+.destacados-box{
+    max-height: 500px;
+    min-height: 210px;
+    margin: auto;
+    padding: 20px;
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 10px;
+}
+.destacados-box h1{
+    text-align: center;
+    color: white;
+} 
+.destacados-box a{
+    color: white;
+}
+.destacados-box a:visited{
+    color: tomato;
+}
+.destacados-box .derecha{
+    background:transparent;
+    min-width: 40%;
+    float: left;
+    box-sizing: border-box;
+    padding-left: 15%;
+    box-sizing: border-box;
+    }
+.destacados-box .izquierda{
+    background: transparent;
+    box-sizing: border-box;
+    min-width: 40%;
+    float: left;
+    padding-left: 15%;
+    box-sizing: border-box;
+}
+#back{
+    width: 400px;
+    position: absolute;
+}
+
+
+.evaluacion{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    padding: 50px 10px;
+    overflow: hidden;
+    background: transparent;
+}
+.evaluacion #row-evaluation{
+    margin: auto;
+    overflow: visible;
+    background: transparent;
+}
+.materia{
+    margin-bottom: 15px;
+    text-align: center;
+    color: #fff;
+    background: #0d293a;
+}
+.materia-name{
+    background: #0d293a;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+}
+.col-sm{
+    border: solid 1px #0d293a;
+}
+.parcial{
+    background: #0d293a;
+    text-align: center;
+    color: #fff;
+}
+.porcentajesList{
+    text-align: left;
+    background: rgb(196, 216, 233);
+    color: #000;
+}
+.num-1{
+    background: rgb(211, 82, 82);
+    color: whitesmoke;
+}
+.num-2{
+    background: rgb(0, 47, 117);
+    color: whitesmoke;
+}
+.num-3{
+    background: rgb(130, 55, 201);
+    color: whitesmoke;
+}

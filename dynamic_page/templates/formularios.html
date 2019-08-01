@@ -1,0 +1,33 @@
+{% extends 'base_generic.html' %}
+       
+    {% block title %}
+    <title>Gustavo Virtual | Formularios</title>
+    {% endblock title %}
+
+    {% block header %}
+    <header id="header">
+            <h1><a href="index.html">Gustavo Virtual</a></h1>
+            <a href="#nav">Menu</a>
+    </header>
+    {% endblock header %}
+        
+        
+    {% block content %}
+	<section id="one" class="wrapper style1">
+            <div class="inner">
+                <article class="feature left">
+					{% load static %}
+                    <span class="image"><img src="{% static 'images/imgEncuesta.png' %}" alt="Encuesta.webp" /></span>
+                    <div class="content">
+                        <h2>Encuestas</h2>
+                        <ul>
+                                <li><a href="https://mail.google.com/mail"><p>Encuesta Socioemocional clic aqui.</p></a></li>
+                                <li><a href="https://mail.google.com/mail"><p>Encuesta Académica clic aquí.</p></a></li>
+                                <li><a href="https://mail.google.com/mail"><p>Encuesta de Tecnologías clic aquí.</p></a></li>
+                                <li><a href="https://mail.google.com/mail"><p>Evaluación Diagnóstica de TIC's clic aquí.</p></a></li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+    </section>
+    {% endblock content %}

@@ -1,0 +1,305 @@
+/*===================== HOME FORM =================*/
+.Home-form{
+    width: 60%;
+    padding: 5px;
+    padding-left: 50px;
+    float: left;
+}
+.Home-form label{
+    display: none;
+}
+.Home-form input{
+    width: 80%;
+    border-radius: 8px;
+    padding-left: 10px;
+    border: none;
+}
+.Home-form #id_image{
+    background: transparent;
+    margin-left: 15px;
+    display: none;
+}
+.Home-form #image-clear_id{
+    background: transparent;
+    margin-left: 15px;
+    display: none;
+}
+.Home-form select{
+    width: auto;
+    border-radius: 8px;
+    padding-left: 10px;
+    margin-right: 10%;
+    border: none;
+}
+.Home-form textarea{
+    width: 80%;
+    border-radius: 10px;
+    padding: 10px;
+    border: none;
+}
+
+textarea{
+    height: 150px;
+}
+
+
+
+.content-tipeText{
+    width: 35%;
+    height: 100%;
+    background: transparent;
+    float: right;
+    margin-right: 50px;
+    margin-top: 80px;
+    padding: 10px;
+}
+.content-tipeText img{
+    display: inline-flex;
+    width: 150px;
+    margin: 10px;
+}
+#text-simple{
+    box-shadow: 0px 0px 30px #21c0ff;
+}
+
+/*===================== HOME FORM RESPONSIVE =================*/
+@media screen and (max-width:1310px ) {
+    .content-tipeText{
+        width: 30%;
+        height: 100%;
+        float: right;
+        margin-top: 0px;
+        padding: 0;
+    }
+}
+@media screen and (max-width:1100px ) {
+    .content-tipeText{
+        width: 20%;
+        height: 100%;
+        float: right;
+        margin-top: 0px;
+        padding: 0;
+    }
+    .Home-form{
+        width: 70%;
+        padding: 5px;
+        padding-left: 50px;
+        float: left;
+    }
+}
+@media screen and (max-width:810px ) {
+    .content-tipeText{
+        width: 15%;
+        height: 100%;
+        float: right;
+        margin-top: 0px;
+        padding: 0;
+    }
+    .Home-form{
+        width: 75%;
+        padding: 0;
+        float: left;
+    }
+}
+@media screen and (max-width:670px ) {
+    .content-tipeText{
+        width: 15%;
+        height: 100%;
+        float: right;
+        margin-top: 0px;
+        padding: 0;
+    }
+    .Home-form{
+        width: 75%;
+        padding: 0;
+        float: left;
+    }
+    .Home-form input{
+        width: 95%;
+    }
+    .Home-form textarea{
+        width: 95%;
+    }
+}
+@media screen and (max-width:600px ) {
+    .content-tipeText{
+        display: none;
+    }
+    .Home-form{
+        width: 100%;
+        padding: 0 10px;
+        float: left;
+    }
+    .Home-form input{
+        width: 100%;
+    }
+    .Home-form textarea{
+        width: 100%;
+    }
+    .Home-form select{
+        width: 100%;
+    }
+}
+
+/*===================== EVALUATION FORM =================*/
+.Evaluation-form{
+    width: 80%;
+    padding: 5px;
+    margin: auto;
+    padding-left: 50px;
+}
+.Evaluation-form label{
+    display: none;
+}
+.Evaluation-form input{
+    width: 90%;
+    border-radius: 8px;
+    padding-left: 10px;
+    border: none;
+}
+.Evaluation-form #id_image{
+    background: transparent;
+    margin-left: 15px;
+    display: none;
+}
+.Evaluation-form #image-clear_id{
+    background: transparent;
+    margin-left: 15px;
+    display: none;
+}
+.Evaluation-form select{
+    width: auto;
+    border-radius: 8px;
+    padding-left: 10px;
+    margin-right: 10%;
+    border: none;
+}
+.Evaluation-form textarea{
+    width: 90%;
+    height: 200px;
+    border-radius: 10px;
+    padding: 10px;
+    border: none;
+}
+
+.user-form label{
+    display: inline-block;
+    width: 100%;
+}
+/*===================== EVALUATION FORM RESPONSIVE =================*/
+
+@media screen and (max-width:810px ) {
+    .Evaluation-form{
+        width: 95%;
+    }
+}
+@media screen and (max-width:670px ) {
+    .Evaluation-form input{
+        width: 100%;
+    }
+    .Evaluation-form textarea{
+        width: 100%;
+    }
+}
+@media screen and (max-width:500px ) {
+    .Evaluation-form{
+        padding: 0;
+    }
+    .Evaluation-form input{
+        width: 100%;
+    }
+    .Evaluation-form textarea{
+        width: 100%;
+    }
+}
+
+
+
+/*========================== BOTONES ============================*/
+.boton{
+    padding: 2px 15px;
+    border-radius: 5px;
+}
+
+.btn-save-purple{
+    font-weight: bold;
+    border: solid 2px #1a1f72;
+    color: #1a1f72;
+    background: transparent;
+}
+.btn-save-purple:hover{
+    border: solid 2px rgba(26, 31, 114, 0.8);
+    color: #ffffff;
+    background: rgba(26, 31, 114, 0.9);
+    transition: 0.2s;
+}
+
+.btn-save-pink{
+    font-weight: bold;
+    border: solid 2px #c2006b;
+    color: #ffffff;
+    background: #c2006b;
+    margin: auto;
+    margin-bottom: 10px;
+}
+.btn-save-pink:hover{
+    border: solid 2px #ff1696;
+    background: #ff1696;
+}
+
+.btn-add{
+    color: #fff;
+    background: transparent;
+    font-size: 16pt;
+    transition: ease 0.1s;
+    height: 100%;
+}
+.btn-add:hover{
+    background: #17223b;
+    transition: ease 0.1s;
+    color: #fff;
+}
+
+.btn-upload{
+    font-weight: bold;
+    border: solid 2px #27aa80;
+    color: #ffffff;
+    background: #27aa80;
+    margin: auto;
+}
+.btn-upload:hover{
+    border: solid 2px #2cbe90;
+    background: #2cbe90;
+}
+
+@media screen and (max-width: 573px ) {
+    .btn-add span{
+        display: none;
+    }
+    .bar-btn{
+        min-height: 65px;
+        height: auto;
+    }
+    .btn-add i{
+        font-size: 22pt;
+    }
+    .btn-add{
+        padding: 15px 11px 8px 11px;
+        margin: 0;
+        background: #17223b;
+        border-radius: 50%;
+        transform: translateY(5px);
+    }
+}
+
+
+
+/*========================== BOTONES ============================*/
+.spacebuton{
+    width: 80%;
+    text-align: center;
+}
+#save-home{
+    display: inline-block;
+    margin-top: 46px;
+}

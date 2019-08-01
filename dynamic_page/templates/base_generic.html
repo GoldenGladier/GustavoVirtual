@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+        {% block title %}
+        <title>Gustavo Virtual</title>
+        {% endblock title %}      
+		<meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		{% load static %}
+		<link rel="stylesheet" href="{% static 'css/main.css' %}" />
+		<link rel="shortcut icon" href="{% static 'images/logo.png' %}">
+		<link rel="stylesheet" href="{% static 'css/style.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/socialbar.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/paragraph.css' %}">
+
+	    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		{% block loadResources %}
+			
+		{% endblock loadResources %}
+			
+	</head>
+		<!-- ========================== LOADER ==========================-->
+
+		<section id="preloader">
+			<div class="block" id="block">
+				<div class="box">
+					<div class="circle derecha"></div>
+				</div>
+				<div class="box">
+					<div class="circle core"></div>
+				</div>
+				<div class="box">
+					<div class="circle izquierda"></div>
+				</div>
+			</div>
+		</section>
+	
+		<!-- ========================== LOADER ==========================-->
+	<body class="landing">
+
+        <!-- Header -->
+        
+        {% block header %}
+        <header id="header">
+                <h1><a href="{% url 'index.html' %}">Gustavo Virtual</a></h1>
+                <a href="#nav">Menu</a>
+        </header>
+            
+        {% endblock header %}
+            
+
+		<!-- Nav -->
+			<nav id="nav">
+				<ul class="links">
+					<li><a href="{% url 'index.html' %}"><i class="icon fa-home"></i> Home</a></li>
+					<li><a href="{% url 'carreras.html' %}"><i class="icon fa-graduation-cap"></i> Carrera</a></li>
+					<li><a href="{% url 'recursos.html' %}"><i class="icon fa-paperclip"></i> Recursos</a></li>
+					<li><a href="{% url 'evaluacion.html' %}"><i class="icon fa-edit"></i> Evaluación</a></li>
+					<li><a href="formularios.html"><i class="icon fa-credit-card"></i> Formularios</a></li>
+					<li><a href="{% url 'bibliografia.html' %}"><i class="icon fa-book"></i> Bibliografía</a></li>
+					<li><a href="{% url 'contacto.html' %}"><i class="icon fa-comments"></i> Contacto</a></li>
+				</ul>
+			</nav>
+
+        <!-- Banner -->
+        
+        {% block banner %}
+            
+        {% endblock banner %}
+        
+			<div class="socialBar">
+					<a href="https://www.facebook.com/Plataforma-Virtual-LI-y-Maret-Gustavo-Arturo-M-R-258289758073536/" id = "iconoFacebook" class="fab fa-facebook" target="_blank"></a>
+					<a href="https://twitter.com/HorusOmega" id = "iconoTwitter" class="fab fa-twitter" target="_blank"></a>
+					<a href="https://www.youtube.com/c/GustavoArturoMRHorusomega" id = "iconoYoutube" class="fab fa-youtube" target="_blank"></a>
+					<a href="https://ticscbtis82.blogspot.com/" id = "iconoBlog" class="fab fa-blogger" target="_blank"></a>
+					<a href="http://dgetivinculacion.com/moodgeti/" id = "iconoMod" class="fab fa-medium-m" target="_blank"></a>
+			</div>
+<!--Prueba-->
+<div class="Todo">
+	<div class="White">
+        {% block content %}
+        <!-- THE CONTENT    -->
+        {% endblock content %}
+	</div>
+</div>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<ul class="icons">
+						<li><a href="https://www.facebook.com/Plataforma-Virtual-LI-y-Maret-Gustavo-Arturo-M-R-258289758073536/" class="fab fa-facebook-f">
+
+						</a></li>
+						<li><a href="https://twitter.com/HorusOmega" class="fab fa-twitter">
+							<span class="label"></span>
+						</a></li>
+						<li><a href="https://www.youtube.com/c/GustavoArturoMRHorusomega" class="fab fa-youtube">
+							<span class="label"></span>
+						</a></li>
+						<li><a href="https://ticscbtis82.blogspot.com/" class="fab fa-blogger" target="_blank">
+
+						</a></li>
+						<li><a href="http://dgetivinculacion.com/moodgeti/" class="fab fa-medium-m" target="_blank" id="icon-online">
+							
+						</a></li>
+					</ul>
+					<ul class="copyright">
+						<li>Copyright © 2018.</li>
+						<li>Creada por Omar Aguirre Alvarez</li>
+					</ul>
+				</div>
+			</footer>
+
+        <!-- Scripts -->
+            {% load static %}
+			<script src="{% static 'js/jquery.min.js' %}"></script>
+			<script src="{% static 'js/skel.min.js' %}"></script>
+			<script src="{% static 'js/util.js' %}"></script>
+			<script src="{% static 'js/main.js' %}"></script>
+			
+			{% block scripts-load %}
+				
+			{% endblock scripts-load %}
+				
+	</body>
+</html>

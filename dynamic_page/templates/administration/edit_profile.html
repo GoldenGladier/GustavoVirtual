@@ -1,0 +1,36 @@
+{% extends 'admin_generic.html' %}
+
+    {% block title %}
+    <title>Admin Master | Editar Usuario</title>
+    {% endblock title %}
+
+    {% block editUser-menu %}
+    <a href="{% url 'edit-user' %}"><li class="active"><i class="fas fa-user-edit"></i> Perfil</li></a>
+    {% endblock editUser-menu %}
+    {% block editUser-menu-side %}
+    <a href="{% url 'edit-user' %}"><li class="active"><i class="fas fa-user-edit"></i> Perfil</li></a>
+    {% endblock editUser-menu-side %}
+              
+    {% block content %}
+    <div id="text">
+            <form method="post" class="Evaluation-form user-form Home-form" enctype="multipart/form-data">
+                <h1>Editar Usuario</h1>
+
+                {% csrf_token %}
+                {{ user_form.as_p }}
+                {{ profile_form.as_p }}
+                <div class="spacebuton">
+                <button type="submit" class="boton btn-save-pink" id="save-home">Guardar Cambios</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+ 
+    {% endblock content %}
+
+    {% block resources %}
+        {% load static %}
+        <script type="text/javascript" src="{% static 'js/admin-js/basic.js' %}"></script>
+    {% endblock resources %}

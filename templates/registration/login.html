@@ -1,0 +1,46 @@
+{% extends "log_generic.html" %}
+
+{% block title %}
+<title>Login</title>
+{% endblock title %}
+
+{% block content %}
+<form action="{% url 'login' %}" method="post">
+    {% if form.errors %}
+        <div class="noti" id="noti">
+                <div class="row">
+                        <div class="col-md-auto notificacion item">
+                            <i class="far fa-bell notificacion" data-anijs="if: mouseover, on: body, do: wobble animated infinite"></i>
+                        </div>
+                        <div class="col-sm item">
+                            Inicie sesión con una cuenta que tenga acceso a esta página.
+                        </div>
+                        <div class="col-md-auto">
+                            <i id="close" class="fas fa-times-circle" data-anijs="if: click, on: #close, do: bounceOut animated, to: .noti"></i>
+                        </div>
+                </div>
+        </div>
+    {% endif %}
+    
+    {% csrf_token %}
+    <div>
+        <td>{{ form.username.label_tag }}</td><br>
+        <td>{{ form.username }}</td>
+    </div>
+    <div>
+        <td>{{ form.password.label_tag }}</td><br>
+        <td>{{ form.password }}</td>
+    </div>
+    <div>
+        <input type="submit" value="LOGIN" class="btn-submit">
+        <input type="hidden" name="next" value="{{ next }}">
+    </div>
+    {# Assumes you setup the password_reset view in your URLconf #}
+    <p><a href="{% url 'password_reset' %}" class="link-password">¿Olvidaste tu contraseña?</a></p>
+</form>
+{% endblock %}
+
+
+
+
+

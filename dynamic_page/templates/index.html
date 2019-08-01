@@ -1,0 +1,108 @@
+{% extends 'base_generic.html' %}
+
+    
+    {% block title %}
+    <title>Gustavo Virtual | Home</title>
+    {% endblock title %}
+
+    
+    {% block header %}
+    <header id="header" class="alt">
+            {% load static %}
+            <img id = "logoOmaga" src="{% static 'images/LogoOmaga.png' %}">
+            <h1><a href="index.html">Gustavo Virtual</a></h1>
+            <a href="#nav">Menu</a>
+    </header>
+    {% endblock header %}
+        
+    
+    {% block banner %}
+        <section id="banner">
+            {% load static %}
+            <div class="text">
+            <img id = "logoCb" src = "{% static 'images/circulologo.png' %}">
+            <h2>Plataforma Virtual</h2>
+            <p>Ofimática y Programación - CBTis No. 82</p>
+            <p>L.I. y Maret. Gustavo Arturo M. R.</p>
+            </div>
+        </section>
+    {% endblock banner %}
+        
+              
+    {% block content %}
+   
+    {% if object_list %}
+
+        {% for object in object_list %}
+            <!--============== CLASE DE TEXTO SIMPLE ===================-->
+            {% if object.typeClass == 'txtsimple' %}
+            <div class="paragraph row">
+                    <div class="col-12">
+                            <p>
+                                <h2>{{ object.title }}</h2>
+                                <h1>{{ object.subtitle }}</h1>
+                                {{ object.text|linebreaks }} 
+                            </p>
+                    </div>
+            </div>
+            <!--============== CLASE DE TEXTO CON IMAGEN A LA DERECHA ===================-->
+            {% elif object.typeClass == 'txtimg-right'%}
+            <div class="paragraph row">
+                <div class="col-9">
+                        <p>
+                            <h2>{{ object.title }}</h2>
+                            <h1>{{ object.subtitle }}</h1>
+                            {{ object.text|linebreaks }} 
+                        </p>
+                </div>
+                <div class="col">
+                        <!--{% load static %}
+                        <img src = "{% static 'images/imagenTemplate.png' %}" alt="{{ paragraphs.title }}"-->
+                        <img src="{{ object.image.url }}" alt="{{ object.image.url }}">
+                </div>
+            </div>
+            <!--============== CLASE DE TEXTO CON IMAGEN A LA IZQUIERDA ===================-->
+            {% elif object.typeClass == 'txtimg-left'%}
+            <div class="paragraph row">
+                <div class="col">
+                        <!--{% load static %}
+                        <img src = "{% static 'images/imagenTemplate.png' %}" alt="{{ paragraphs.title }}"-->
+                        <img src="{{ object.image.url }}" alt="{{ object.image.url }}">
+                </div>
+                <div class="col-9">
+                        <p>
+                            <h2>{{ object.title }}</h2>
+                            <h1>{{ object.subtitle }}</h1>
+                            {{ object.text|linebreaks }} 
+                        </p>
+                </div>
+            </div>
+            <!--============== CLASE DE TEXTO CON IMAGEN DEBAJO ===================-->
+            {% elif object.typeClass == 'txtsimple-img'%}
+            <div class="paragraph row">
+                <div class="cols">
+                        <p>
+                            <h2>{{ object.title }}</h2>
+                            <h1>{{ object.subtitle }}</h1>
+                            {{ object.text|linebreaks }} 
+                        </p>
+                </div>
+                <div class="w-100"></div>
+                <div class="col">
+                        <!--{% load static %}
+                        <img src = "{% static 'images/imagenTemplate.png' %}" alt="{{ paragraphs.title }}" class="imgDown"-->
+                        <img src="{{ object.image.url }}" alt="{{ object.image.url }}" class="imgDown">
+                </div>
+            </div>
+            <!--============== ERROR EN EL TIPO DE CLASE ===================-->
+            {% else %}
+            <div class="paragraph {{ object.typeClass }}">
+                <h2>Hubo un error al leer el tipo de clase del articulo "{{ object.title }}".</h2>
+            </div>
+            {% endif %}
+ 
+        {% endfor %}
+        {% else %}
+            <p>Not Found Paragraph.</p>
+        {% endif %}
+    {% endblock content %}

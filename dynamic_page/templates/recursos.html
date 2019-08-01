@@ -1,0 +1,223 @@
+{% extends 'base_generic.html' %}
+
+    
+    {% block title %}
+    <title>Gustavo Virtual | Recursos</title>
+    {% endblock title %}
+
+    {% block banner %}{% endblock banner %}
+        
+    {% block content %}
+        <div id="texto">
+            <br>
+            <h2 id = "tics">Recursos y software</h2>
+        </div>
+    </div></div>
+    {% if resource_list %}
+    <div class="destacados">
+        <div class="destacados-box">
+                 <h1>Destacados:</h1>
+                 
+            <div class="derecha">
+        {% for resource in object_list %}
+            {% if resource.typeClass == 'align-left' %}
+                <a href="{{ resource.resource.url }}">{{ resource.name }}</a> 
+               <br>
+            {% endif %}
+        {% endfor %}
+            </div>
+            <div class="izquierda">
+        {% for resource in object_list %}
+            {% if resource.typeClass == 'align-right' %}
+                <a href="{{ resource.resource.url }}">{{ resource.name }}</a> 
+               <br>
+            {% endif %}
+        {% endfor %}
+            </div>
+        </div>
+    </div>
+                
+    {% else %}
+        <p>Not Found Resources.</p>
+    {% endif %}
+    <div class="Todo">
+        	<div class="White">
+                <div id="texto">
+                <h4>TIC's</h4>
+            <!--==================== correo ==================-->
+				<header>
+					<p>Correo Electrónico</p>
+				</header>
+			<p>También conocido como e-mail, un término inglés derivado de electronic mail.
+             Es un servicio que permite el intercambio de mensajes a través de sistemas de comunicación electrónicos.</p>
+           
+             <a href="https://mail.google.com/mail"><p>Gmail</a> -
+             <a href="https://login.yahoo.com/m?.intl=es&.lang=es-ES">Yahoo</a> -
+             <a href="https://outlook.live.com/owa/">Outlook</p></a>
+
+            <!--==================== mapa conceptual ==================-->
+                <header>
+                        <p>Mapa Conceptual</p>
+                    </header>
+                <p>
+                    Es un esquema de ideas que sirve de herramienta para organizar de manera gráfica y simplificada conceptos y enunciados a fin de reforzar un conocimiento. En un mapa conceptual se relacionan por medio de conectores gráficos conceptos e ideas para complementar una idea generalizada de lo que es un principal, el objetivo de un mapa conceptual es conseguir el significado por medio de enlaces que se analizan fácilmente.
+                </p>
+
+            <!--==================== sopa de letras ==================-->
+                <header>
+                        <p>Sopa de letras</p>
+                    </header>
+                <p>
+                        Es un juego que consiste en descubrir un número determinado de palabras enlazando estas letras de forma horizontal, vertical o diagonal y en cualquier sentido, tanto de derecha a izquierda como de izquierda a derecha, y tanto de arriba abajo, como de abajo arriba.
+                </p>
+
+                <a href="https://www.educima.com/wordsearch/spa/"><p>Web</a></p>
+
+            <!--==================== crucigrama ==================-->
+                <header>
+                        <p>Crucigrama</p>
+                    </header>
+                <p>
+                        Crucigrama en el que todas las casillas están en blanco, de modo que la persona que lo hace debe deducir y marcar dónde está la separación entre palabras para resolverlo.
+                </p>
+
+                <a href="https://www.educima.com/crosswordgenerator/spa/"><p>Web</a></p>
+                 
+            <!--==================== Word ==================-->
+            <header>
+                    <p>Word</p>
+                </header>
+            <p>
+                    Es un programa informático orientado al procesamiento de textos. Fue creado por la empresa Microsoft, y viene integrado predeterminadamente en el paquete ofimático denominado Microsoft Office.
+           </p>
+
+            <a href="https://office.live.com/start/Word.aspx?ui=es-ES"><p>Web</a> - <a href="https://play.google.com/store/apps/details?id=com.microsoft.office.word">App</a></p>
+
+            <!--==================== Excel ==================-->
+            <header>
+                    <p>Excel</p>
+                </header>
+            <p>
+                    Es un programa informático orientado al procesamiento de textos. Fue creado por la empresa Microsoft, y viene integrado predeterminadamente en el paquete ofimático denominado Microsoft Office.
+                    Es un programa informático desarrollado y distribuido por Microsoft Corp. Se trata de un software que permite realizar tareas contables y financieras gracias a sus funciones, desarrolladas específicamente para ayudar a crear y trabajar con hojas de cálculo.
+            </p>
+
+            <a href="https://office.live.com/start/Excel.aspx?omkt=es-ES"><p>Web</a> - <a href="https://play.google.com/store/apps/details?id=com.microsoft.office.excel">App</a></p>
+
+
+            <!--==================== PorwerPoint ==================-->
+            <header>
+                    <p>PorwerPoint</p>
+                </header>
+            <p>
+                    Es el nombre de uno de los programas más populares creados por Microsoft. Se trata de un software que permite realizar presentaciones a través de diapositivas. El programa contempla la posibilidad de utilizar texto, imágenes, música y animaciones.
+            </p>
+
+            <a href="https://office.live.com/start/PowerPoint.aspx"><p>Web</a> - <a href="https://play.google.com/store/apps/details?id=com.microsoft.office.powerpoint">App</a></p>
+
+            <!--==================== Procesador de Texto ==================-->
+            <header>
+                    <p>Procesador de Texto</p>
+                </header>
+            <p>
+                    Es una aplicación informática que permite crear y editar documentos de texto en una computadora. Se trata de un software de múltiples funcionalidades para la redacción, con diferentes tipografías, tamaños de letra, colores, tipos de párrafos, efectos artísticos y otras opciones.
+            </p>
+
+            <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.docs.editors.docs"><p>App</a></p>
+
+            <!--==================== Hoja de calculo ==================-->
+            <header>
+                    <p>Hoja de Cálculo</p>
+                </header>
+            <p>
+                    Es una aplicación de los paquetes de informática tradicionales que está programada para el manejo de datos numéricos y alfanuméricos con el propósito de obtener conclusiones informes de contabilidad. Las posibilidades de este tipo de aplicaciones son inmensas, ya que permite operar con cálculos complejos, fórmulas, funciones y elaborar gráficos de todo tipo.
+            </p>
+
+            <a href="https://docs.google.com/spreadsheets/u/0/#_ga=2.20984955.1774157503.1529593427-869890506.1529593427"><p>Web</a> - <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.docs.editors.sheets">App</a></p>
+
+            <!--==================== Presentación Electrónica ==================-->
+            <header>
+                    <p>Presentación Electrónica</p>
+                </header>
+            <p>
+                    Son productosinformáticos que se basan en imágenes elaboradasen las computadoras y que se muestran medianteun proyector. Se realizan en programas quepermiten crear de una manera rápida llamativa yprofesional laminas o diapositivas digitales dondese pueden insertar textos, imágenes, gráficos,tablas y elementos multimedia como video, audio yanimación. 
+            </p>
+            <a id = "baseDeDatos" href="https://play.google.com/store/apps/details?id=com.google.android.apps.docs.editors.slides"><p>App</a></p>
+
+<!--***************************************** BASE DE DATOS ***************************************-->
+        <h4>BASE DE DATOS</h4>
+            <!--==================== sql ==================-->
+            <header>
+                    <p>SQL</p>
+                </header>
+            <p>
+                    Es un lenguaje de programación estándar e interactivo para la obtención de información desde una base de datos y para actualizarla.
+            </p>
+            <a href="https://www.mysql.com/products/workbench/"><p>Web</a></p>
+
+            <!--==================== access ==================-->
+            <header>
+                    <p>ACCESS</p>
+                </header>
+            <p>
+                    Es un software que permite gestionar una base de datos. El programa forma parte de Microsoft Office, un paquete de aplicaciones que permiten realizar tareas de oficina.
+            </p>
+         
+            <!--==================== Visual Studio ==================-->
+            <header>
+                    <p>Visual Studio</p>
+                </header>
+            <p id = "sistemasOperativos">
+                    Es un entorno de desarrollo integrado (IDE, por sus siglas en inglés) para sistemas operativos Windows. Soporta múltiples lenguajes de programación, tales como C++, C#, Visual Basic .NET, F#, Java, Python, Ruby y PHP, al igual que entornos de desarrollo web, como ASP.NET MVC, Django, etc., a lo cual hay que sumarle las nuevas capacidades online bajo Windows Azure en forma del editor Monaco.
+            </p>
+
+<!--***************************************** SISTEMAS OPERATIVOS ***************************************-->
+    <h4>SISTEMAS OPERATIVOS</h4>
+            <!--==================== virtualbox==================-->
+            <header>
+                    <p>VitualBox</p>
+                </header>
+            <p>
+                    Es un softwarede virtualización para arquitecturas x86/amd64. Actualmente es desarrollado por Oracle Corporation como parte de su familia de productos de virtualización.
+            </p>
+            <a href="https://www.virtualbox.org/"><p>Web</a></p>
+
+            <!--==================== Windows 10 ==================-->
+            <header>
+                    <p>Windows 10</p>
+                </header>
+            <p>
+                    Es la nueva versión del sistema operativo de Microsoft, que llega para intentar redimir los errores de Windows 8, y hacer la experiencia de uso mucho más familiar y tradicional para el usuario de teclado y ratón, trayendo de regreso varias características que muchos extrañaban, e incorporando nuevas.
+            </p>
+         
+            <!--==================== Windows Server ==================-->
+            <header>
+                    <p>Windows Server</p>
+                </header>
+            <p>
+                    Es una marca que abarca una línea de productos del servidor de Microsoft Corporation y consiste en un sistema operativo diseñado para servidores de Microsoft y una gama de tipos de productos dirigidos al mercado más amplio de negocios; Windows Server incluye, por ejemplo, interfaz de usuario, el administrador de tareas, el IP address management, entre otros.
+            </p>
+
+            <!--==================== Linux ==================-->
+            <header>
+                    <p>Linux</p>
+                </header>
+            <p>
+                    Es uno de los términos empleados para referirse a la combinación del núcleo o kernel libre similar a Unix pero con el sistema operativo GNU; Linux es el software necesario para que tu ordenador te permita utilizar programas, como por ejemplo, editores de texto, juegos, navegadores de Internet, etc; su desarrollo es uno de los ejemplos más prominentes de software libre.
+            </p>
+            <a href="https://www.ubuntu.com/download/desktop?"><p>Web</a></p>
+
+            <!--==================== Linux Server ==================-->
+            <header>
+                    <p>Linux Server</p>
+                </header>
+            <p>
+                    Es una implementación de servidor privado virtual hecha por el agregado de capacidades de virtualización en el ámbito de Sistema Operativo y distribuida como software libre, licenciada bajo GPL. El proyecto fue iniciado por Jacques Gélinas.
+            </p>
+            <a href="https://www.ubuntu.com/download/server?"><p>Web</a></p>
+
+
+		    </div>  
+        </div>
+    </div>
+    {% endblock content %}

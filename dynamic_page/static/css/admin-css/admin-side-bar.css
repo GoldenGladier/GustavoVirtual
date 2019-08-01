@@ -1,0 +1,275 @@
+.side-bar{
+    color: #fff;
+    font-size: 30px;
+    margin: 5px 15px;
+}
+.side-bar a{
+    color: #fff;
+    font-size: 30px;
+    font-family: 'Righteous', cursive;
+}
+.side-bar a i{
+    font-size: 30px;
+}
+.side-bar a span{
+    color: #ff6337;
+}
+#bars{
+    display: none;
+}
+#logo{
+    float: left;
+}
+header{
+    margin-top: 55px;
+    width: 15%;
+    min-width: 100px;
+    height: 100%;
+    position: fixed;
+    background: rgba(0, 85, 175);;
+    border-right: solid 2px #00faab5e;
+    box-shadow: 30px 0px 40px #ee426767;
+}
+.headBar{
+    width: 100%;
+    height: 55px;
+    position: fixed;
+    background: rgba(0, 85, 175);
+    border-bottom: solid 2px #00faab93;
+    position: fixed;
+    z-index: 2;
+}
+.user{
+    height: 180px;
+    padding-top: 10px;
+    background: transparent;
+    border-bottom: solid 2px #00faab83;
+    overflow: hidden;
+}
+.userRound{
+    height: 110px;
+    width: 110px;
+    margin: auto;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 3px #ee4266;
+    border-bottom: solid 3px transparent;
+    animation-name: rotate-one;
+    animation: 1s infinite linear rotate-one;
+}
+.lineOne{
+    height: 94%;
+    width: 94%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 2px transparent;
+    border-left: solid 2px #fcd307;
+    border-top: solid 2px #fcd307;
+    animation: 4s infinite ease-in-out rotate-two;
+}
+.lineTwo{
+    height: 87%;
+    width: 87%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 2px #00faac;
+    border-style: dashed; 
+    animation: 1s infinite step-end rotate-one;
+}
+
+.superpose{
+    height: 77px;
+    width: 77px;
+    margin: auto;
+    border-radius: 50%;
+    transform: translateY(-94px);
+}
+.superpose img{
+    width: 100%;
+    border-radius: 50%;
+}
+.info-user{
+    background: transparent;
+    position: relative;
+    height: auto;
+    width: 150px;
+    margin-top: 5px;
+    color: #ffff; 
+    text-align: center;
+    transform: translateY(-70px);
+    margin: auto;
+}
+.info-user h1{
+    font-size: 15px;
+}
+.menu{
+    margin-top: 10px;
+    height: 100%;
+    width: 100%;
+}
+.lista-menu{
+    width: 100%;
+    background: transparent;
+}
+.lista-menu li{
+    list-style: none;
+    color: #fff;
+    margin: 3px 0px;
+    padding: 5px 10px;
+    padding-left: 25px;
+}
+.lista-menu a{
+    font-size: 13pt;
+    overflow: hidden;
+}
+.lista-menu .active{
+    background: #08235a;
+}
+
+.menu_Mobile{
+    margin-top: 55px;
+    width: 15%;
+    min-width: 100px;
+    height: 100%;
+    position: fixed;
+    background: rgba(0, 85, 175);
+    border-right: solid 2px #00faab5e;
+    box-shadow: 30px 0px 40px #ee426767;
+    display: none;
+}
+
+/*========================== ANIMATIONS ===========================*/
+
+@keyframes rotate-one{
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+@keyframes rotate-two{
+    from{
+        transform: rotate(360deg);
+    }
+    to{
+        transform: rotate(0deg);
+    }
+}
+@keyframes rotate-none{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(0deg);
+    }
+}
+
+/*========================== ANIMATIONS ===========================*/
+
+
+/*========================== MENU RESPONSIVE ===========================*/
+@media screen and (max-width:1010px){
+    .lista-menu a{
+        font-size: 11pt;
+    }
+}
+@media screen and (max-width:889px){
+    .lista-menu a{
+        font-size: 10pt;
+    }
+    .menu i{
+        font-size: 8pt;
+    }
+    .info-user h1{
+        font-size: 13px;
+        text-align: center;
+        padding-right: 30px;
+    }
+    .userRound{
+        height: 90px;
+        width: 90px;
+    }
+    .superpose{
+        height: 60px;
+        width: 60px;
+        margin-top: 19px;
+    }
+    .user{
+        height: 160px;
+        padding-top: 10px;
+    }
+}
+@media screen and (max-width:810px ) {
+    header{
+        left: -100%;
+        width: 80%;
+        z-index: 1;
+        display: none;
+    }
+    .menu_Mobile{
+        display: initial;
+        width: 80%;
+        left: -100%;
+        background: rgba(0, 85, 175, 0.98);
+        z-index: 1;
+    }
+    .menu li{
+        padding-left: 35%;
+    }
+    #bars{
+        display: inline;
+    }
+    #logo{
+        float: right;
+    }
+    .headBar{
+        width: 100%;
+        margin-left: 0;
+        height: 55px;
+    }
+    .blockContent{
+        width: 100%;
+        height: 93%;
+        background: transparent;
+        margin-left: 0;
+    }
+
+    .user{
+        height: 180px;
+        padding-top: 10px;
+    }
+    .userRound{
+        height: 110px;
+        width: 110px;
+    }
+    .superpose{
+        height: 77px;
+        width: 77px;
+        margin: auto;
+    }
+    .info-user h1{
+        font-size: 15px;
+        padding-right: 0;
+    }
+    .lista-menu a, i{
+        font-size: 13pt;
+
+    }
+    .menu i{
+        font-size: 13pt;
+    }
+}    
+@media screen and (min-width:810px ) {
+    header{
+        left: 0;
+        width: 15%; 
+    }
+}
+/*========================== MENU RESPONSIVE ===========================*/

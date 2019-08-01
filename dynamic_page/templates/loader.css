@@ -1,0 +1,83 @@
+/* ================================== LOADER ================================== */
+
+#preloader{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+.block{
+    height: 13vh;
+    width: 13vh;
+    display: flex;
+    align-items: center;
+    background: transparent;
+    animation: 5s girar infinite;
+}
+.box{
+    height: 0;
+    width: 30%;
+    margin: 0 1.5%;
+    background: linear-gradient(rgb(34, 97, 114), rgb(42, 154, 185), rgb(34, 97, 114));
+    border-radius: 5px;
+    float: left;
+    animation: 1s animar linear infinite;
+}
+.type1{
+    animation-delay: 0;
+}
+.type2{
+    animation-delay: 100ms;
+}
+.type3{
+    animation-delay: 200ms;
+}
+.type4{
+    animation-delay: 300ms;
+}
+.type5{
+    animation-delay: 400ms;
+}
+.type6{
+    animation-delay: 500ms;
+}
+
+@keyframes animar{
+    0%{
+
+    }
+    50%{
+        height: 100%;
+    }
+    100%{
+        height: 0;
+    }
+}
+@keyframes girar{
+    0%{
+
+    }
+    25%{
+        transform: rotate(90deg);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    75%{
+        transform: rotate(270deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+
+/* ================================== LOADER ================================== */

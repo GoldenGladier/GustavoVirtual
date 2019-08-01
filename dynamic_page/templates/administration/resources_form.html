@@ -1,0 +1,37 @@
+{% extends 'admin_generic.html' %}
+
+    
+    {% block title %}
+    <title>Admin Master | Carrera</title>
+    {% endblock title %}
+
+    {% block recursos-menu %}
+    <a href="{% url 'admin_Resources_Articles_List' %}"><li class="active"><i class="fas fa-paperclip"></i> Recursos</li></a>
+    {% endblock recursos-menu %}
+    {% block recursos-menu-side %}
+    <a href="{% url 'admin_Resources_Articles_List' %}"><li class="active"><i class="fas fa-paperclip"></i> Recursos</li></a>
+    {% endblock recursos-menu-side %}
+              
+    {% block content %}
+    <div id="text">
+
+            <form method="POST" class="Home-form" enctype="multipart/form-data">
+                <h1>Recurso</h1>
+
+                {% csrf_token %}
+                {{ form.as_p }}
+                <div class="spacebuton">
+                    <button type="submit" class="boton btn-save-pink" id="save-home">Guardar</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+ 
+    {% endblock content %}
+
+    {% block resources %}
+        {% load static %}
+        <script type="text/javascript" src="{% static 'js/admin-js/basic.js' %}"></script>
+    {% endblock resources %}

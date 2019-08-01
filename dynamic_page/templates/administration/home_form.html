@@ -1,0 +1,45 @@
+{% extends 'admin_generic.html' %}
+
+    
+    {% block title %}
+    <title>Gustavo Virtual | Administracion</title>
+    {% endblock title %}
+
+    {% block home-menu %}
+    <a href="{% url 'admin_Home_Articles_List' %}"><li class="active"><i class="fas fa-home"></i> Home</li></a>
+    {% endblock home-menu %}
+    {% block home-menu-side %}
+    <a href="{% url 'admin_Home_Articles_List' %}"><li class="active"><i class="fas fa-home"></i> Home</li></a>
+    {% endblock home-menu-side %}
+              
+    {% block content %}
+    <div id="text">
+
+            <form method="POST" class="Home-form" enctype="multipart/form-data">
+                <h1>Articulo</h1>
+
+                {% csrf_token %}
+                {{ form.as_p }}
+                <div class="spacebuton">
+                    <button type="submit" class="boton btn-save-pink" id="save-home">Guardar</button>
+                </div>
+            </form>
+
+            <div class="content-tipeText">
+                    {% load static %}
+                    <img onclick="cambioClaseDesdeImagen('txtsimple')" id="text-simple" src="{% static 'images/admin/texto-simple.png' %}" alt="texto-simple.png">
+                    <img onclick="cambioClaseDesdeImagen('txtsimple-img')" id="text-img-bottom" src="{% static 'images/admin/texto-img-bottom.png' %}" alt="texto-img-bottom.png">
+                    <img onclick="cambioClaseDesdeImagen('txtimg-left')" id="text-img-left" src="{% static 'images/admin/texto-img-left.png' %}" alt="texto-img-left.png">
+                    <img onclick="cambioClaseDesdeImagen('txtimg-right')" id="text-img-right" src="{% static 'images/admin/texto-img-right.png' %}" alt="texto-img-right.png">
+            </div>
+
+        </div>
+    </div>
+</div>
+ 
+    {% endblock content %}
+
+    {% block resources %}
+        {% load static %}
+        <script type="text/javascript" src="{% static 'js/admin-js/basic.js' %}"></script>
+    {% endblock resources %}
