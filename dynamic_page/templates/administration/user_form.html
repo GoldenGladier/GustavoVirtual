@@ -17,9 +17,11 @@
 
                     <form method="POST" class="Evaluation-form user-form Home-form" enctype="multipart/form-data">
                         <h1>Nuevo Usuario</h1>
-
+                        
+                           
                         {% csrf_token %}
                         {{ form.as_p }}
+                        {{ profile_form.as_p }}
                         <div class="spacebuton">
                             <button type="submit" class="boton btn-save-pink" id="save-home">Guardar</button>
                         </div>

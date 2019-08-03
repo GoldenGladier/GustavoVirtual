@@ -205,13 +205,14 @@ from django.contrib.auth.forms import UserCreationForm
 def create_user(request):
     if request.method == 'POST':
         form = UserCreationForm(request.POST, request.FILES)
-        profile_form = ProfileForm(request.POST, instance=request.user.profile)
-        if form.is_valid():
+        profile_form = ProfileForm(request.POST, request.FILES, instance=request.user.profile)
+        if form.is_valid() and profile_form.is_valid():
             form.save()
+            profile_form.save()
             return HttpResponseRedirect('/Gustavo_Virtual/AdminMaster/home-articles-list')
     else:
         form = UserCreationForm()
-        profile_form = ProfileForm(request.POST, instance=request.user.profile)
+        profile_form = ProfileForm()
     return render(request, 'administration/user_form.html', {'form':form, 'profile_form': profile_form})
 
 
@@ -238,24 +239,6 @@ def update_profile(request):
         'profile_form': profile_form
     })
 
-# def update_profile(request):
-#     if request.method == 'GET':
-#         user_form = UserForm(instance=request.user)
-#         profile_form = ProfileForm(instance=request.user.profile)
-#     else:
-#         user_form = UserForm(request.POST, instance=request.user)
-#         profile_form = ProfileForm(request.POST, request.FILES, instance=request.user.profile)
-#         if user_form.is_valid() and profile_form.is_valid():
-#             user_form.save()
-#             profile_form.save()
-#             messages.success(request, ('Your profile was successfully updated!'))
-#             return redirect('/Gustavo_Virtual/AdminMaster/home-articles-list')
-#         else:
-#             messages.error(request, ('Please correct the error below.'))
-#     return render(request, 'administration/edit_profile.html', {
-#         'user_form': user_form,
-#         'profile_form': profile_form
-#     })
 
 class AdminUserList(LoginRequiredMixin, ListView):
     model = User

@@ -252,7 +252,7 @@ a:hover{
     color: #d1851b !important;
 }
 
-/*========================== CONTROLS RESPONSIVE ===========================*/
+/*========================== FOOTER ===========================*/
 footer{
     width: 100%;
     height: auto;
@@ -279,6 +279,18 @@ footer div h1{
 }
 footer div h1 span{
     font-size: 23px;
+    font-family: 'Dancing Script', cursive;
+    font-weight: bold;
+}
+.copyright{
+    width: 90%;
+    margin: auto;
+    font-size: 14px;
+    font-family: 'Righteous', cursive;
+    color: #fff;
+}
+.copyright span{
+    font-size: 19px;
     font-family: 'Dancing Script', cursive;
     font-weight: bold;
 }

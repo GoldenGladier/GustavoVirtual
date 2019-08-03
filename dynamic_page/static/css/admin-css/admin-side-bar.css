@@ -116,6 +116,7 @@ header{
 .lista-menu{
     width: 100%;
     background: transparent;
+    border-bottom: solid 2px #00faab5e;
 }
 .lista-menu li{
     list-style: none;
@@ -124,13 +125,20 @@ header{
     padding: 5px 10px;
     padding-left: 25px;
 }
+.lista-menu li:hover{
+    background: linear-gradient(to right, #bb2c4b, #ee4266, #bb2c4b);
+}
 .lista-menu a{
     font-size: 13pt;
     overflow: hidden;
 }
 .lista-menu .active{
-    background: #08235a;
+    background: linear-gradient(to right, #061d49, #092866, #061d49);
 }
+.lista-menu .active:hover{
+    background: linear-gradient(to right, #05173a, #08235a, #05173a);
+}
+
 
 .menu_Mobile{
     margin-top: 55px;
