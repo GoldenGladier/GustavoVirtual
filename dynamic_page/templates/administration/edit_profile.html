@@ -13,9 +13,8 @@
               
     {% block content %}
     <div id="text">
-            <form method="post" class="Evaluation-form user-form Home-form" enctype="multipart/form-data">
+            <form method="post" class="Evaluation-form user-form Home-form"  enctype="multipart/form-data">
                 <h1>Editar Usuario</h1>
-
                 {% csrf_token %}
                 {{ user_form.as_p }}
                 {{ profile_form.as_p }}

@@ -18,7 +18,7 @@ class ProfileForm(forms.ModelForm):
         model = Profile
         fields = ('avatar',)
 
-class ContactForm(forms.Form):
+class ContactForm(forms.ModelForm):
     contact_name = forms.CharField(required = True)
     contact_email = forms.EmailField(required = True)
     content = forms.CharField(required = True, widget = forms.Textarea)

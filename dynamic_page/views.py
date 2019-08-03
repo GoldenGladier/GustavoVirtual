@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse 
-from .models import Home, Carreras, RecursosDestacados, Evaluation, HomeForm
+from .models import Home, Carreras, RecursosDestacados, Evaluation, HomeForm, Profile
 from django.template import loader
 from django.views import generic, View
 # from django.views import View
@@ -205,12 +205,14 @@ from django.contrib.auth.forms import UserCreationForm
 def create_user(request):
     if request.method == 'POST':
         form = UserCreationForm(request.POST, request.FILES)
+        profile_form = ProfileForm(request.POST, instance=request.user.profile)
         if form.is_valid():
             form.save()
             return HttpResponseRedirect('/Gustavo_Virtual/AdminMaster/home-articles-list')
     else:
         form = UserCreationForm()
-    return render(request, 'administration/user_form.html', {'form':form})
+        profile_form = ProfileForm(request.POST, instance=request.user.profile)
+    return render(request, 'administration/user_form.html', {'form':form, 'profile_form': profile_form})
 
 
 from django.contrib import messages
@@ -220,10 +222,10 @@ from django.contrib import messages
 def update_profile(request):
     if request.method == 'POST':
         user_form = UserForm(request.POST, instance=request.user)
-        profile_form = ProfileForm(request.POST, instance=request.user.profile)
+        profile_form = ProfileForm(request.POST, request.FILES, instance=request.user.profile)
         if user_form.is_valid() and profile_form.is_valid():
-            user_form.save()
             profile_form.save()
+            user_form.save()
             messages.success(request, ('¡El perfil ah sido actualizado!'))
             return redirect('/Gustavo_Virtual/AdminMaster/home-articles-list')
         else:
@@ -236,6 +238,25 @@ def update_profile(request):
         'profile_form': profile_form
     })
 
+# def update_profile(request):
+#     if request.method == 'GET':
+#         user_form = UserForm(instance=request.user)
+#         profile_form = ProfileForm(instance=request.user.profile)
+#     else:
+#         user_form = UserForm(request.POST, instance=request.user)
+#         profile_form = ProfileForm(request.POST, request.FILES, instance=request.user.profile)
+#         if user_form.is_valid() and profile_form.is_valid():
+#             user_form.save()
+#             profile_form.save()
+#             messages.success(request, ('Your profile was successfully updated!'))
+#             return redirect('/Gustavo_Virtual/AdminMaster/home-articles-list')
+#         else:
+#             messages.error(request, ('Please correct the error below.'))
+#     return render(request, 'administration/edit_profile.html', {
+#         'user_form': user_form,
+#         'profile_form': profile_form
+#     })
+
 class AdminUserList(LoginRequiredMixin, ListView):
     model = User
     context_object_name = 'user_list'
@@ -243,14 +264,15 @@ class AdminUserList(LoginRequiredMixin, ListView):
     paginate_by = 5
     queryset = User.objects.all()   
 
+@login_required
 def update_profile_ID(request, id_user):
     usr = User.objects.get(id = id_user)
     if request.method == 'GET':
         user_form = UserForm(instance=usr)
         profile_form = ProfileForm(instance=usr.profile)
     else:
-        user_form = UserForm(request.POST, instance=usr.user)
-        profile_form = ProfileForm(request.POST, instance=usr.profile)
+        user_form = UserForm(request.POST, instance=usr)
+        profile_form = ProfileForm(request.POST, request.FILES, instance=usr.profile)
         if user_form.is_valid() and profile_form.is_valid():
             user_form.save()
             profile_form.save()

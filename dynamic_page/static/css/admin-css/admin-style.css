@@ -251,3 +251,34 @@ a:hover{
 #gold{
     color: #d1851b !important;
 }
+
+/*========================== CONTROLS RESPONSIVE ===========================*/
+footer{
+    width: 100%;
+    height: auto;
+    padding-top: 5px;
+    position: fixed;
+    bottom: 0;
+    background: rgb(0, 85, 175);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    border-top: solid 2px #00faab5e;
+}
+footer div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin: auto;
+}
+footer div h1{
+    font-size: 18px;
+    font-family: 'Righteous', cursive;
+}
+footer div h1 span{
+    font-size: 23px;
+    font-family: 'Dancing Script', cursive;
+    font-weight: bold;
+}
