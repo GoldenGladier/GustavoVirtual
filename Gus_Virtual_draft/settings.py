@@ -126,5 +126,9 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = '/static-root/'
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 LOGIN_REDIRECT_URL = '/Gustavo_Virtual/AdminMaster'
+
+EMAIL_BACKEND = 'django_mailjet.backends.MailjetBackend'
+MAILJET_API_KEY = 'ca2f6fd12d47a198e49e575dd058fc42'
+MAILJET_API_SECRET = '581909ae333b43da89ac5454c67c7df3'

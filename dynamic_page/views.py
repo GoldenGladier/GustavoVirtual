@@ -309,8 +309,8 @@ def contact(request):
             email = EmailMessage(
                 "Mensaje desde GustavoVirtual - Alguien quiere contactarte",
                 content,
-                "Gustavo Virtual" +'',
-                ['youremail@gmail.com'],
+                "omar.fi.wwr@gmail.com" +'',
+                ['omar.fi.wwr@gmail.com'],
                 headers = {'Responder a:': contact_email }
             )
             email.send()

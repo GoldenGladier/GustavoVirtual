@@ -294,3 +294,92 @@ footer div h1 span{
     font-family: 'Dancing Script', cursive;
     font-weight: bold;
 }
+
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(rgb(0, 3, 22),rgb(0, 0, 0));;
+    z-index: 800;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ball1{
+    height: 25vh;
+    width: 25vh;
+    border-radius: 50%;
+    border: solid 2px #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: girar 2s ease infinite;
+}
+.ball2{
+    height: 85%;
+    width: 85%;
+    border-radius: 50%;
+    border-top: solid 2px #fff;
+    border-bottom: solid 2px #fff;
+    border-right: solid 2px transparent;
+    border-left: solid 2px transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ball3{
+    height: 85%;
+    width: 85%;
+    border-radius: 50%;
+    border: solid 2px #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ball4{
+    height: 80%;
+    width: 80%;
+    border-radius: 50%;
+    border-left: solid 2px #fff;
+    border-top: solid 2px transparent;
+    border-right: solid 2px #fff;
+    border-bottom: solid 2px transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: girar 1s linear infinite;
+}
+.circle{
+    height: 23%;
+    width: 23%;
+    border-radius: 50%;
+    background: #fff;
+    margin: 4.1%;
+    animation: botar 1s linear infinite;
+}
+
+@keyframes girar{
+    0%{
+
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes botar{
+    0%{
+
+    }
+    50%{
+        transform: scale(0.5);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
