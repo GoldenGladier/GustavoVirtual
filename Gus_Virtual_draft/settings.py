@@ -132,3 +132,12 @@ LOGIN_REDIRECT_URL = '/Gustavo_Virtual/AdminMaster'
 EMAIL_BACKEND = 'django_mailjet.backends.MailjetBackend'
 MAILJET_API_KEY = 'ca2f6fd12d47a198e49e575dd058fc42'
 MAILJET_API_SECRET = '581909ae333b43da89ac5454c67c7df3'
+
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'in-v3.mailjet.com' # servicio de correo smtp
+EMAIL_HOST_USER = 'ca2f6fd12d47a198e49e575dd058fc42' # id de correo electrónico
+EMAIL_HOST_PASSWORD = '581909ae333b43da89ac5454c67c7df3' #password
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = 'omar.fi.wwr@gmail.com'
+
